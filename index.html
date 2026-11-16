@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Certificado – III Congreso Unidos x el Cáncer</title>
+<title>Certificado – III Congreso Unidos X el Cáncer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
@@ -31,10 +31,10 @@ small{color:var(--mut);display:block;margin-top:10px;font-size:.8rem}
 </style></head><body>
 <main>
 <h1>Certificado de participación</h1>
-<p class="s">III Congreso Unidos x el Cáncer · Bariloche, noviembre 2026</p>
+<p class="s">III Congreso Unidos x el Cáncer · Bariloche, Noviembre 2026</p>
 <div class="card">
-<label for="n">Nombre y apellido</label>
-<input id="n" autocomplete="name" placeholder="Ej: María Pérez">
+<label for="n">Nombre y apellido + DNI:(opcional)</label>
+<input id="n" autocomplete="name" placeholder="Ej: María Pérez - DNI: 12.345.678">
 <label for="o">Organización</label>
 <input id="o" autocomplete="organization" placeholder="Ej: Fundación Esperanza">
 <label for="e">Correo electrónico (para recibirlo por mail)</label>
@@ -68,7 +68,7 @@ function draw(){
 ['n','o'].forEach(i=>$(i).addEventListener('input',draw));
 if(document.fonts){document.fonts.load('600 76px Poppins').then(()=>document.fonts.load('500 62px Poppins')).then(draw).catch(()=>{})}
 function valid(needMail){
- if(!$('n').value.trim()||!$('o').value.trim()){msg('Completá nombre y organización.','err');return false}
+ if(!$('n').value.trim()||!$('o').value.trim()){msg('Completá nombre, DNI y organización.','err');return false}
  if(needMail&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('e').value.trim())){msg('Ingresá un correo válido.','err');return false}
  return true;
 }
